@@ -1,0 +1,6 @@
+build-debug
+build-release
+dist
+*.nupkg
+nuget.exe
+*.bak

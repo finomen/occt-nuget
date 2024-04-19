@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <!-- Required elements-->
+        <id>OCCT.LINUX64</id>
+        <version>7.8.1.1</version>
+        <description>Pacakge https://github.com/Open-Cascade-SAS/OCCT as NuGet pacakge</description>
+        <authors>Nikolai Filchenko</authors>
+		<projectUrl>https://github.com/finomen/occt-nuget</projectUrl>
+		<license type="expression">LGPL-2.1-or-later</license>
+    </metadata>
+    <files>
+		<file src="README.md" target="/" />
+		<file src="occt.linux64.targets" target="build/" />
+		<file src="dist\inc\**\*.*" target="build\include" />
+		<file src="dist\lib\*.so" target="runtimes\linux64\" />
+	</files>
+</package>

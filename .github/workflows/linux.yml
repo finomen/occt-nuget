@@ -12,6 +12,10 @@ jobs:
           submodules: recursive
       - name: Install opengl
         run: sudo apt-get install -y libgl1-mesa-dev
+      - uses: nuget/setup-nuget@v2
+        with:
+          nuget-api-key: ${{ secrets.NuGetAPIKey }}
+          nuget-version: '5.x'
       - name: Release(amd64)
         uses: threeal/cmake-action@main
         with:
@@ -19,4 +23,7 @@ jobs:
           build-dir: build-release
           build-args: -t install
           args: -DCMAKE_INSTALL_PREFIX=../dist -DUSE_TK=OFF -DUSE_FREETYPE=OFF -DBUILD_MODULE_Draw:BOOL=FALSE -DBUILD_MODULE_DataExchange:BOOL=TRUE -DBUILD_MODULE_OpenGL:BOOL=FALSE -DBUILD_MODULE_Visualization:BOOL=FALSE -DUSE_OPENGL:BOOL=FALSE -DCMAKE_BUILD_TYPE=Release
-
+      - name: Package
+        run: nuget pack occt.linux64.nuspec
+      - name: Push
+        run: nuget push *.nupkg
