@@ -8,6 +8,7 @@
         <authors>Nikolai Filchenko</authors>
 		<projectUrl>https://github.com/finomen/occt-nuget</projectUrl>
 		<license type="expression">LGPL-2.1-or-later</license>
+		<readme>README.md</readme>
     </metadata>
     <files>
 		<file src="README.md" target="/" />
