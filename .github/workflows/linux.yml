@@ -26,4 +26,4 @@ jobs:
       - name: Package
         run: nuget pack occt.linux64.nuspec
       - name: Push
-        run: nuget push *.nupkg --source https://api.nuget.org/v3/index.json
+        run: nuget push *.nupkg -Source https://api.nuget.org/v3/index.json
