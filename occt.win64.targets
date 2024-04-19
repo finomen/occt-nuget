@@ -10,7 +10,9 @@
   <ItemDefinitionGroup>
 	<ClCompile>
 		<AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)\include</AdditionalIncludeDirectories>
-	</ClCompile>
+	</ClCompile>  
+  </ItemDefinitionGroup>	  
+  <ItemDefinitionGroup>
 	<Link>
 		<AdditionalDependencies>TKBO.lib;TKBRep.lib;TKBin.lib;TKBinL.lib;TKBinTObj.lib;TKBinXCAF.lib;TKBool.lib;TKCAF.lib;TKCDF.lib;TKDE.lib;TKDECascade.lib;TKDEGLTF.lib;TKDEIGES.lib;TKDEOBJ.lib;TKDEPLY.lib;TKDESTEP.lib;TKDESTL.lib;TKDEVRML.lib;TKExpress.lib;TKFeat.lib;TKFillet.lib;TKG2d.lib;TKG3d.lib;TKGeomAlgo.lib;TKGeomBase.lib;TKHLR.lib;TKLCAF.lib;TKMath.lib;TKMesh.lib;TKOffset.lib;TKPrim.lib;TKRWMesh.lib;TKService.lib;TKShHealing.lib;TKStd.lib;TKStdL.lib;TKTObj.lib;TKTopAlgo.lib;TKV3d.lib;TKVCAF.lib;TKXCAF.lib;TKXMesh.lib;TKXSBase.lib;TKXml.lib;TKXmlL.lib;TKXmlTObj.lib;TKXmlXCAF.lib;TKernel.lib;%(AdditionalDependencies)</AdditionalDependencies>
 		<AdditionalLibraryDirectories>$(MSBuildThisFileDirectory)\lib</AdditionalLibraryDirectories>

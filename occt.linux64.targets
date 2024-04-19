@@ -11,6 +11,8 @@
 	<ClCompile>
 		<AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)\include</AdditionalIncludeDirectories>
 	</ClCompile>
+  </ItemDefinitionGroup>	  
+  <ItemDefinitionGroup>
 	<Link>
 		<AdditionalDependencies>TKBO;TKBRep;TKBin;TKBinL;TKBinTObj;TKBinXCAF;TKBool;TKCAF;TKCDF;TKDE;TKDECascade;TKDEGLTF;TKDEIGES;TKDEOBJ;TKDEPLY;TKDESTEP;TKDESTL;TKDEVRML;TKExpress;TKFeat;TKFillet;TKG2d;TKG3d;TKGeomAlgo;TKGeomBase;TKHLR;TKLCAF;TKMath;TKMesh;TKOffset;TKPrim;TKRWMesh;TKService;TKShHealing;TKStd;TKStdL;TKTObj;TKTopAlgo;TKV3d;TKVCAF;TKXCAF;TKXMesh;TKXSBase;TKXml;TKXmlL;TKXmlTObj;TKXmlXCAF;TKernel;%(AdditionalDependencies)</AdditionalDependencies>
 		<AdditionalLibraryDirectories>$(MSBuildThisFileDirectory)\lib</AdditionalLibraryDirectories>
