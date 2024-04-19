@@ -22,7 +22,7 @@ jobs:
           build-dir: build-release
           generator: "Visual Studio 17 2022"
           build-args: -t install --config Release
-          args: -DCMAKE_INSTALL_PREFIX=../dist -DUSE_TK=OFF -DUSE_FREETYPE=OFF -DBUILD_MODULE_Draw:BOOL=FALSE -DBUILD_MODULE_DataExchange:BOOL=TRUE -DBUILD_MODULE_OpenGL:BOOL=FALSE -DBUILD_MODULE_Visualization:BOOL=FALSE -DUSE_OPENGL:BOOL=FALSE -DCMAKE_BUILD_TYPE=Release
+          args: -DCMAKE_INSTALL_PREFIX=dist -DUSE_TK=OFF -DUSE_FREETYPE=OFF -DBUILD_MODULE_Draw:BOOL=FALSE -DBUILD_MODULE_DataExchange:BOOL=TRUE -DBUILD_MODULE_OpenGL:BOOL=FALSE -DBUILD_MODULE_Visualization:BOOL=FALSE -DUSE_OPENGL:BOOL=FALSE -DCMAKE_BUILD_TYPE=Release
       - name: Package
         run: nuget pack occt.win64.nuspec
       - name: Push
