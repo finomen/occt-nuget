@@ -1,0 +1,30 @@
+name: Win64
+on:
+  push:
+jobs:
+  build-win64:
+    name: Win64
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.2
+        with:
+          submodules: recursive
+      - uses: ilammy/msvc-dev-cmd@v1
+      - name: Debug(Win64)
+        uses: threeal/cmake-action@main
+        with:
+          source-dir: OCCT
+          build-dir: build-debug
+          generator: "Visual Studio 17 2022"
+          build-args: -t install
+          args: -DCMAKE_INSTALL_PREFIX=../dist -DUSE_TK=OFF -DUSE_FREETYPE=OFF -DBUILD_MODULE_Draw:BOOL=FALSE -DBUILD_MODULE_DataExchange:BOOL=TRUE -DBUILD_MODULE_OpenGL:BOOL=FALSE -DBUILD_MODULE_Visualization:BOOL=FALSE -DUSE_OPENGL:BOOL=FALSE -DCMAKE_BUILD_TYPE=Debug
+      - name: Release(Win64)
+        uses: threeal/cmake-action@main
+        with:
+          source-dir: OCCT
+          build-dir: build-release
+          generator: "Visual Studio 17 2022"
+          build-args: -t install
+          args: -DCMAKE_INSTALL_PREFIX=../dist -DUSE_TK=OFF -DUSE_FREETYPE=OFF -DBUILD_MODULE_Draw:BOOL=FALSE -DBUILD_MODULE_DataExchange:BOOL=TRUE -DBUILD_MODULE_OpenGL:BOOL=FALSE -DBUILD_MODULE_Visualization:BOOL=FALSE -DUSE_OPENGL:BOOL=FALSE -DCMAKE_BUILD_TYPE=Release
+
