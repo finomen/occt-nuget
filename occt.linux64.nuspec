@@ -13,7 +13,7 @@
     <files>
 		<file src="README.md" target="/" />
 		<file src="occt.linux64.targets" target="build/" />
-		<file src="dist\inc\**\*.*" target="build\include" />
+		<file src="dist\include\**\*.*" target="build\include" />
 		<file src="dist\lib\*.so" target="runtimes\linux64\" />
 	</files>
 </package>
