@@ -1,0 +1,20 @@
+name: Linux
+on:
+  push:
+jobs:
+  build-linux:
+    name: Linux
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.2
+        with:
+          submodules: recursive
+      - name: Release(amd64)
+        uses: threeal/cmake-action@main
+        with:
+          source-dir: OCCT
+          build-dir: build-release
+          build-args: -t install
+          args: -DCMAKE_INSTALL_PREFIX=../dist -DUSE_TK=OFF -DUSE_FREETYPE=OFF -DBUILD_MODULE_Draw:BOOL=FALSE -DBUILD_MODULE_DataExchange:BOOL=TRUE -DBUILD_MODULE_OpenGL:BOOL=FALSE -DBUILD_MODULE_Visualization:BOOL=FALSE -DUSE_OPENGL:BOOL=FALSE -DCMAKE_BUILD_TYPE=Release
+
