@@ -4,7 +4,7 @@
         <!-- Required elements-->
         <id>OCCT.LINUX64</id>
         <version>7.8.1.2</version>
-        <description>Pacakge https://github.com/Open-Cascade-SAS/OCCT as NuGet pacakge</description>
+        <description>Package https://github.com/Open-Cascade-SAS/OCCT as NuGet pacakge</description>
         <authors>Nikolai Filchenko</authors>
 		<projectUrl>https://github.com/finomen/occt-nuget</projectUrl>
 		<license type="expression">LGPL-2.1-or-later</license>
